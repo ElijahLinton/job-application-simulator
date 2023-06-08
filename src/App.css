@@ -1,0 +1,26 @@
+.app-header{
+  color:rgb(255, 216, 224);
+  padding: 30px;
+
+  justify-content:space-around;
+  text-align: center;
+  background-color:blue;
+ }
+ p {
+  font-size: 20px;
+  font-family:'Times New Roman', Times, serif;
+ }
+
+#disclaimer{
+  margin-top: 6em;
+  text-align: center;
+}
+footer{
+  margin-top: 38em;
+  color:rgb(255, 216, 224);
+  padding: 30px;
+
+  justify-content:space-around;
+  text-align: center;
+  background-color:blue;
+}

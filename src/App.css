@@ -24,3 +24,6 @@ footer{
   text-align: center;
   background-color:blue;
 }
+.container{
+  display: block;
+}

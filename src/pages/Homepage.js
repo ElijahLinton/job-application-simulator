@@ -3,14 +3,10 @@ import { useState } from "react";
 
 function Homepage() {
   const [indexPage, setIndexPage] = useState(1);
-  function handleAnswer(){
-    
-    var answer = new FormData(document.querySelector("form"));
-        console.log("form data: ");
-        for(var pair of answer.entries()){
-          console.log(pair[0]+':' +pair[1]);
-        }
-        return false;
+  function handleAnswer(e){
+    e.preventDefault()
+     const answers = [...document.querySelectorAll('input[type=radio]:checked')].reduce((a,{name,value}) =>(a[name]=value,a), {});
+     console.log(answers)
   }
 
 
@@ -32,20 +28,20 @@ function Homepage() {
             <form onSubmit={handleAnswer}>
               
             <label className="container">web developer
-                <input type='radio' name="radio"/>
+                <input type='radio' name="web developer"/>
                     <span className='checkmark'></span>
              </label>
 
              <label className="container"> Data analyst
-                <input type='radio' name="radio"/>
+                <input type='radio' name="Data analyst"/>
                     <span className='checkmark'></span>
              </label>
 
              <label className="container"> sales repesenative
-                <input type='radio' name="radio"/>
+                <input type='radio' name="sales repesenative"/>
                     <span className='checkmark'></span>
              </label>
-             <input type="submit" name="submit" value='submit'/>
+             <button className='submitBtn'>submit </button>
            </form>
         </section>
 

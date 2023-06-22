@@ -6,7 +6,7 @@ function Homepage() {
   function handleAnswer(e){
     e.preventDefault()
      const answers = [...document.querySelectorAll('input[type=radio]:checked')].reduce((a,{name,value}) =>(a[name]=value,a), {});
-     console.log(answers)
+     localStorage.setItem("answers: ", JSON.stringify(answers))
   }
 
 

@@ -13,22 +13,27 @@ function Questionone() {
       });
       console.log("Document ID: ", saveQuestion.id);
     } catch (e) {
-      console.error("something is wrong with the way the data is collected ");
+      console.error("something is wrong with the way the data is collected ", e);
     }
   };
 
   return (
-    <div>
+    <div className="body">
+            <header className="app-header">
+        <h1>Job application simulator</h1>
+      </header>
       <section className="questions">
         <h3>explain why would you be a good fit for this position?</h3>
+        <form onSubmit={saveData}>
         <input
           type="text"
           placeholder="explain why would you be a good fit for this position?"
           onChange={(e) => setResponse(e.target.value)}
         />
-        <button type="submit" onClick={saveData}>
+        <button type="submit" >
           submit
         </button>
+        </form>
       </section>
     </div>
   );

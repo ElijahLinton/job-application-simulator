@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 
 function Homepage() {
   const [indexPage, setIndexPage] = useState(1);
-  function handleAnswer(e){
-    e.preventDefault()
-     const answers = [...document.querySelectorAll('input[type=radio]:checked')].reduce((a,{name,value}) =>(a[name]=value,a), {});
-     localStorage.setItem("answers: ", JSON.stringify(answers))
+  function handleAnswer(e) {
+    e.preventDefault();
+    const answers = [
+      ...document.querySelectorAll("input[type=radio]:checked"),
+    ].reduce((a, { name, value }) => ((a[name] = value), a), {});
+    localStorage.setItem("answers: ", JSON.stringify(answers));
   }
 
-
-
   return (
-    <div>
+    <div className="body">
       <header className="app-header">
         <h1>Job application simulator</h1>
       </header>
@@ -24,31 +24,36 @@ function Homepage() {
         </p>
       </section>
 
-        <section className="inactive">
-            <h1>What position are you interested in?</h1>
-            <form onSubmit={handleAnswer}>
-              
-            <label className="container">web developer
-                <input type='radio' name="web developer"/>
-                    <span className='checkmark'></span>
-             </label>
+      <section className="inactive">
+        <h1>What position are you interested in?</h1>
+        <form onSubmit={handleAnswer}>
+          <label className="container">
+            web developer
+            <input type="radio" name="web developer" />
+            <span className="checkmark"></span>
+          </label>
 
-             <label className="container"> Data analyst
-                <input type='radio' name="Data analyst"/>
-                    <span className='checkmark'></span>
-             </label>
+          <label className="container">
+            {" "}
+            Data analyst
+            <input type="radio" name="Data analyst" />
+            <span className="checkmark"></span>
+          </label>
 
-             <label className="container"> sales repesenative
-                <input type='radio' name="sales repesenative"/>
-                    <span className='checkmark'></span>
-             </label>
-             <button className='submitBtn'>submit </button>
-           </form>
-           <Link to="/quest">
-           <button>next</button>
-           </Link>
-        </section>
+          <label className="container">
+            {" "}
+            sales repesenative
+            <input type="radio" name="sales repesenative" />
+            <span className="checkmark"></span>
+          </label>
+          <button className="submitBtn">submit </button>
+        </form>
+      </section>
 
+      <Link to="/quest">
+        <button>next</button>
+      </Link>
+      
       <footer>
         <p>socials</p>
       </footer>

@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import { json } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Homepage() {
   const [indexPage, setIndexPage] = useState(1);
@@ -43,6 +44,9 @@ function Homepage() {
              </label>
              <button className='submitBtn'>submit </button>
            </form>
+           <Link to="/quest">
+           <button>next</button>
+           </Link>
         </section>
 
       <footer>

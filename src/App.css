@@ -1,25 +1,3 @@
-.body{
- 
-  text-align: center;
-}
-
-.submitBtn{
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-    width: 50px;
-
-}
-
-form{
-  padding:10px;
-  padding-bottom: 10em;
-  display: flex;
-  flex-direction: column;
-}
-
-
-
 .app-header{
   color:rgb(255, 216, 224);
   padding: 30px;
@@ -47,5 +25,5 @@ footer{
   background-color:blue;
 }
 .container{
-
+  display: block;
 }

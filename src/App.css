@@ -27,3 +27,35 @@ footer{
 .container{
   display: block;
 }
+::placeholder{
+  color:#ffcdd7;
+}
+.userInput{
+  color:rgb(255, 216, 224);
+  width: 210px;
+  height: 19px;
+  background:rgb(130, 130, 243);
+}
+.submitBtn{
+  border-top-right-radius:15px;
+  color: rgb(255, 216, 224);
+  height:26px;
+  background-color:blue;
+}
+.questions{
+text-align: center;
+}
+.nextBtn{
+  border-bottom-right-radius:15px;
+  color: rgb(255, 216, 224);
+  height:26px;
+  background-color:blue;
+  margin-top: 17em;
+  
+}
+#formSection{
+text-align: center;
+}
+footer{
+  margin-top: 31em;
+}

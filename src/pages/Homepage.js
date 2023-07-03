@@ -13,7 +13,7 @@ function Homepage() {
 
 
   return (
-    <div>
+    <div id="formSection">
       <header className="app-header">
         <h1>Job application simulator</h1>
       </header>
@@ -45,7 +45,7 @@ function Homepage() {
              <button className='submitBtn'>submit </button>
            </form>
            <Link to="/quest">
-           <button>next</button>
+           <button className='nextBtn'>next</button>
            </Link>
         </section>
 

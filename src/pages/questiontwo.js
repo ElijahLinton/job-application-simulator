@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { collection, addDoc } from "firebase/firestore";
+import {collection, addDoc} from "firebase/firestore"
 import { db } from "../Firebase";
 import { Link } from "react-router-dom";
 
 
 
-function Questionone() {
+function Questiontwo() {
 
+  
   const saveData = async (e) => {
     e.preventDefault();
   
@@ -21,34 +22,47 @@ function Questionone() {
   
   };
 
-  const [response, setResponse] = useState("");
-  
-  return (
-    <div>
-      <header className="app-header">
-        <h1>Job application simulator</h1>
-      </header>
-      <section className="questions">
+    const [response, setResponse] = useState("");
+    
+    return (
+        <div>
+            <header classeName="app-header">
+            <h1>Job application simulator</h1>
+            </header>
+            <section className="questions">
         <form className="active">
-        <h3>First Name?</h3>
+        <h3>list your refrence information here.</h3>
         <input
           type="text"
-          placeholder="Firstname"
+          placeholder="Reference first name"
           className="userInput"
           onChange={(e) => setResponse(e.target.value)}
         />
+        
+        <input
+          type="text"
+          placeholder="Reference last  name"
+          className="userInput"
+          onChange={(e) => setResponse(e.target.value)}
+        />
+
+<input
+          type="text"
+          placeholder="Reference phone number"
+          className="userInput"
+          onChange={(e) => setResponse(e.target.value)}
+        />
+
         <button type="submit" className='submitBtn' onClick={saveData}>
           submit
         </button>
         </form>
 
         <form className="inactive">
-        <h3>Last Name?</h3>
+        <h3> Please send your resume with experiance, and previous jobs</h3>
         <input
-          type="text"
-          placeholder="Why would you be a good fit for this position?"
+          type="file"
           className="userInput"
-          onChange={(e) => setResponse(e.target.value)}
         />
         <button type="submit" className='submitBtn' onClick={saveData}>
           submit
@@ -57,16 +71,28 @@ function Questionone() {
         
         
         <form className="inactive">
-        <h3>Mobile/Phone</h3>
+        <h3>Are you willing to learn new skills as required?</h3>
         <input
-          type="text"
-          placeholder="Dont put a real number!"
+          type="radio"
+          id = "Yes"
           className="userInput"
+          value="Yes"
           onChange={(e) => setResponse(e.target.value)}
         />
+
+        <input
+          type="radio"
+          id = "Yes"
+          className="userInput"
+          value="Yes"
+          onChange={(e) => setResponse(e.target.value)}
+        />
+
+        <label for="Yes">Yes</label>
         <button type="submit" className='submitBtn' onClick={saveData}>
           submit
         </button>
+        
         </form>
 
         <form className="inactive">
@@ -81,17 +107,14 @@ function Questionone() {
           submit
         </button>
         </form>
-        <Link to="/questtwo">
-        <button className='nextBtn'>next</button>
-        </Link>
       </section>
 
       <footer>
         <p>socials</p>
       </footer>
+        </div>
 
-    </div>
-  );
-}
+    );
+};
 
-export default Questionone;
+export default Questiontwo;
